@@ -12,13 +12,7 @@ const app = express();
 
 
 // Middleware
-app.use(cors({
-  origin: 'https://ujjwaltodos.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type, Authorization', // Add any other headers you need
-}));
+app.use(cors());
 
 
 app.get("/", (req, res) => {
