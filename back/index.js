@@ -13,9 +13,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  //origin:'https://ujjwaltodos.vercel.app'
+  origin: 'https://ujjwaltodos.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,  // enable set cookie
+  optionsSuccessStatus: 204,
 }));
-
 app.get("/", (req, res) => {
   res.status(200).send("Hello, it's working");
 });
