@@ -15,9 +15,11 @@ const app = express();
 app.use(cors({
   origin: 'https://ujjwaltodos.vercel.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,  // enable set cookie
+  credentials: true,
   optionsSuccessStatus: 204,
+  allowedHeaders: 'Content-Type', // Add this line to allow the Content-Type header
 }));
+
 app.get("/", (req, res) => {
   res.status(200).send("Hello, it's working");
 });
