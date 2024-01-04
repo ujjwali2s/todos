@@ -13,7 +13,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin:'https://ujjwaltodos.vercel.app'
+  //origin:'https://ujjwaltodos.vercel.app'
 }));
 
 app.get("/", (req, res) => {
