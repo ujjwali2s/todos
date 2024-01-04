@@ -15,9 +15,7 @@ app.use(express.static(__dirname)+"")
 app.use(cors({
   // origin:'https://ujjwaltodos.vercel.app'
 }));
-app.get("/", (req, res) => {
-  res.status(200).send("Hello, it's working");
-});
+
 
 app.use(express.json());
 
