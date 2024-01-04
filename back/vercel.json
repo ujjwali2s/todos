@@ -2,14 +2,13 @@
   "version": 2,
   "routes": [
     {
-      "handle": "cors",
       "src": "/(.*)",
-      "method": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
-      "headers": "*"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://ujjwaltodos.vercel.app",
+        "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "Access-Control-Allow-Credentials": "true"
+      }
     }
   ]
 }
