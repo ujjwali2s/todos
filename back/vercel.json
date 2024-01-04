@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "./index.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
+      "handle": "cors",
       "src": "/(.*)",
-      "dest": "index.js"
+      "method": "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
+      "headers": "*"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
     }
   ]
 }
