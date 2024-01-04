@@ -16,7 +16,7 @@ app.use(cors({
   // origin:'https://ujjwaltodos.vercel.app'
 }));
 app.get("/",(re,req)=>{
-  res.send("Hell it`s working")
+  res.status(200).send("Hell it`s working")
 }
 app.use(express.json());
 
