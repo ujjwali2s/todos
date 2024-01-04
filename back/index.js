@@ -15,6 +15,9 @@ const app = express();
 app.use(cors({
   // origin:'https://ujjwaltodos.vercel.app'
 }));
+app.get("/",(re,req)=>{
+  re.send("Hell it`s working")
+}
 app.use(express.json());
 
 // MongoDB Connection
