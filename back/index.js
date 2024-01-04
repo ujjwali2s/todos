@@ -17,8 +17,9 @@ app.use(cors({
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type', // Add this line to allow the Content-Type header
+  allowedHeaders: 'Content-Type, Authorization', // Add any other headers you need
 }));
+
 
 app.get("/", (req, res) => {
   res.status(200).send("Hello, it's working");
