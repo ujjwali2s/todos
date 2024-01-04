@@ -21,7 +21,7 @@ app.get("/",(re,req)=>{
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://library:CTKqVpXO6o4laGbL@cluster0.zrilhaz.mongodb.net/todos" , { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
@@ -30,6 +30,6 @@ app.use('/auth', authRoutes);
 app.use('/todos', todoRoutes);
 
 // Start server
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log(`Server is running on port `);
 });
