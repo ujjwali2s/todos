@@ -19,7 +19,7 @@ app.use(cors({
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://library:CTKqVpXO6o4laGbL@cluster0.zrilhaz.mongodb.net/todos"  , { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
@@ -33,6 +33,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
 });
 // Start server
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port `);
+app.listen(5000, () => {
+  console.log("server is running");
 });
