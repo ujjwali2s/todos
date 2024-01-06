@@ -33,6 +33,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
 });
 // Start server
-app.listen(5000, () => {
+app.listen("https://todos-lemon-six.vercel.app", () => {
   console.log("server is running");
 });
