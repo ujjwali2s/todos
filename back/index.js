@@ -20,7 +20,7 @@ app.use(cors({
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://library:CTKqVpXO6o4laGbL@cluster0.zrilhaz.mongodb.net/todos"  , { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://library:CTKqVpXO6o4laGb@cluster0.zrilhaz.mongodb.net/todos"  , { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
