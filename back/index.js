@@ -14,8 +14,9 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  // origin:'https://ujjwaltodos.vercel.app'
+  origin: 'https://todos-lemon-six.vercel.app/',
 }));
+
 app.use(express.json());
 
 // MongoDB Connection
@@ -33,6 +34,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
 });
 // Start server
-app.listen("https://todos-lemon-six.vercel.app", () => {
+app.listen(5000, () => {
   console.log("server is running");
 });
